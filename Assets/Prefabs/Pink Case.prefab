@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5678433052326670697}
   - component: {fileID: 6505628132993576272}
   - component: {fileID: 5213715361402444591}
+  - component: {fileID: 6023091946649899436}
   m_Layer: 0
   m_Name: Pink Case
   m_TagString: Untagged
@@ -108,3 +109,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6023091946649899436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7225735165482726959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7f18603cdb02d4aa211d2c35b8ca4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 0
+  canHold: 1
+  isHolding: 0
+  heldObj: {fileID: 0}
+  tempParent: {fileID: 0}
+  playerCamera: {fileID: 0}

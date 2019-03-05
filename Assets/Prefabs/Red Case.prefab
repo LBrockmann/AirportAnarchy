@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7085614473982672712}
   - component: {fileID: 4664906964467565152}
   - component: {fileID: 4490307182989369393}
+  - component: {fileID: 2112883296039477039}
   m_Layer: 0
   m_Name: Red Case
   m_TagString: Untagged
@@ -108,3 +109,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2112883296039477039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888406980637566819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd7f18603cdb02d4aa211d2c35b8ca4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  throwForce: 0
+  canHold: 1
+  isHolding: 0
+  heldObj: {fileID: 0}
+  tempParent: {fileID: 0}
+  playerCamera: {fileID: 0}

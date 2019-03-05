@@ -8,6 +8,8 @@ TagManager:
   - obj2Tag
   - obj3Tag
   - Exit
+  - TempParent
+  - PlayerCamera
   layers:
   - Default
   - TransparentFX
