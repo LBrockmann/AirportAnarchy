@@ -6313,7 +6313,7 @@ MonoBehaviour:
   velocityModifier: 10
   sensitivityX: 1.5
   sensitivityY: 1.5
-  jumpForce: 70
+  jumpForce: 120
   jumpTimeCap: 0.2
 --- !u!136 &1264734318
 CapsuleCollider:

@@ -9,7 +9,7 @@ public class collisionAndVictory : MonoBehaviour
 
 {
     
-    private bool obj1Collected, obj2Collected, obj3Collected;
+    private bool obj1Collected, obj2Collected, obj3Collected = false;
     public Text obj1Text, obj2Text, obj3Text;
     public GameObject exit;
     public Text exitSign;
@@ -19,13 +19,27 @@ public class collisionAndVictory : MonoBehaviour
     {
         mainText.text = "Find the Black Suit Cases";
         exit.SetActive(false);
-        exitSign.text = " ";
+        exitSign.text = "_";
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            obj1Collected = true;
+            obj2Collected = true;
+            obj3Collected = true;
+            Debug.Log("Player Can Leave");
+        }
+       
+        if (obj1Collected == true && obj2Collected == true && obj3Collected == true)
+        {
+            Debug.Log("nestyboi");
+            mainText.text = "You Found Them! Now Get the Hell Outta There!";
+            exit.SetActive(true);
+            //exitSign.text = "FREEDOM";
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -51,13 +65,6 @@ public class collisionAndVictory : MonoBehaviour
             Debug.Log("OBJ3 collision");
             obj3Text.color = Color.green;
             obj3Collected = true;
-        }
-
-        if (obj1Collected == true && obj2Collected == true && obj3Collected == true)
-        {
-            mainText.text = "You Found Them! Now Get the Hell Outta There!";
-            exit.SetActive(true);
-            exitSign.text = "FREEDOM";
         }
     }
 }
