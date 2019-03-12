@@ -25,6 +25,8 @@ public class CaseSpawn : MonoBehaviour
     private bool obj1Switch;
     private bool obj2Switch;
     private bool obj3Switch;
+
+    private float spawnforce;
     
     
     // Start is called before the first frame update
@@ -41,6 +43,8 @@ public class CaseSpawn : MonoBehaviour
         scBottom = 0.2f;
         scTop = 10f;
         spawnCap = 2f;
+        
+        
     }
 
     // Update is called once per frame
@@ -52,6 +56,8 @@ public class CaseSpawn : MonoBehaviour
         objectiveSpawner();
         spawnSpeedUp();
         bullshitSpawner();
+
+        spawnforce = Random.Range(-4, -9);
     }
 
     public void bullshitSpawner()
@@ -65,26 +71,26 @@ public class CaseSpawn : MonoBehaviour
             {
                 case 1:
                     GameObject caseRedInstance = Instantiate(caseRed, transform.position, Quaternion.identity);
-                    caseRedInstance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+                    caseRedInstance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
                     break;
                 
                 case 2:
                     GameObject caseBlueInstance =Instantiate(caseBlue, transform.position, Quaternion.identity);
-                    caseBlueInstance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+                    caseBlueInstance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
                     break;
                 
                 case 3:
                     GameObject caseGreenInstance = Instantiate(caseGreen, transform.position, Quaternion.identity);
-                    caseGreenInstance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+                    caseGreenInstance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
                     break;
                 
                 case 4:
                     GameObject casePinkInstance = Instantiate(casePink, transform.position, Quaternion.identity);
-                    casePinkInstance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+                    casePinkInstance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
                     break;
                 case 5:
                     GameObject casePink2Instance = Instantiate(casePink, transform.position, Quaternion.identity);
-                    casePink2Instance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+                    casePink2Instance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
                     break;
                     
             }
@@ -99,21 +105,21 @@ public class CaseSpawn : MonoBehaviour
         if (Unitime > obj1Spawn && obj1Switch == true)
         {
             GameObject case1Instance =Instantiate(obj1, transform.position, Quaternion.identity);
-            case1Instance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+            case1Instance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
             obj1Switch = false;
         }
         
         if (Unitime > obj2Spawn && obj2Switch == true)
         {
             GameObject case2Instance = Instantiate(obj2, transform.position, Quaternion.identity);
-            case2Instance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+            case2Instance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
             obj2Switch = false;
         }
         
         if (Unitime > obj3Spawn && obj3Switch == true)
         {
             GameObject case3Instance = Instantiate(obj3, transform.position, Quaternion.identity);
-            case3Instance.GetComponent<Rigidbody>().AddForce(-7,1f,1f, ForceMode.Impulse);
+            case3Instance.GetComponent<Rigidbody>().AddForce(spawnforce,1f,1f, ForceMode.Impulse);
             obj3Switch = false;
         }
     }
