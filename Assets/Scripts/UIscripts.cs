@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class UIscripts : MonoBehaviour
@@ -14,5 +15,10 @@ public class UIscripts : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void Disembark()
+    {
+        SceneManager.LoadScene("AirportAnarchy2");
     }
 }
