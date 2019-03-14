@@ -42,7 +42,7 @@ public class collisionAndVictory : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter(Collision collision)
+    /*private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "obj1Tag")
         {
@@ -66,5 +66,5 @@ public class collisionAndVictory : MonoBehaviour
             obj3Text.color = Color.green;
             obj3Collected = true;
         }
-    }
+    }*/
 }

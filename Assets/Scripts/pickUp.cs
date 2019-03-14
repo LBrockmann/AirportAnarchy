@@ -41,7 +41,7 @@ public class pickUp : MonoBehaviour
             this.GetComponent<Rigidbody>().velocity = Vector3.zero;
             this.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
             this.transform.SetParent(tempParent.transform);
-            
+            //this.tag = "Held";
 
             if (Input.GetKeyDown(KeyCode.E))
             {
@@ -58,6 +58,7 @@ public class pickUp : MonoBehaviour
             this.GetComponent<Rigidbody>().useGravity = true;
             this.transform.position = objectPosition;
             this.GetComponent<Rigidbody>().isKinematic = false;
+            //this.tag = null;
         }
     }
 

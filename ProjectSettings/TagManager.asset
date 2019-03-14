@@ -10,6 +10,7 @@ TagManager:
   - Exit
   - TempParent
   - PlayerCamera
+  - Held
   layers:
   - Default
   - TransparentFX

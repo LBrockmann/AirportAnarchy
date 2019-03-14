@@ -26,8 +26,11 @@ public class conveyor : MonoBehaviour
     {
         //PUT IN A LINE OF CODE MEANING IF YOUR HOLDING IT IT WON'T MOVE BROSEPH
         //other.transform.position = Vector3.MoveTowards(other.transform.position, endpoint.position, speed*Time.deltaTime);
-        other.transform.Translate(endpoint.transform.forward * speed * Time.deltaTime, Space.World);
-        //CAN WE MAKE IT A FORCE NOT A TRASNFORM??
+        if (other.GetComponent<pickUp>().isHolding != true)
+        {
+            other.transform.Translate(endpoint.transform.forward * speed * Time.deltaTime, Space.World);
+            //CAN WE MAKE IT A FORCE NOT A TRASNFORM??
+        }
     }
     
 }
