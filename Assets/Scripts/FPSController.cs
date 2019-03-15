@@ -32,6 +32,7 @@ public class FPSController : MonoBehaviour
        private bool jumpAllowed;
        private float jumpTimer;
        public float jumpTimeCap;
+       private float verticalLook;
 
        //public bool jump = true;
        // velocity of conroller multiplied by this number
@@ -58,6 +59,10 @@ public class FPSController : MonoBehaviour
    
            inputVelocity = transform.forward * fpForwardBackward;
            inputVelocity += transform.right * fpStrafe;
+           
+           verticalLook += -pitch;
+           verticalLook = Mathf.Clamp(verticalLook, -80f, 80f);
+           thisCamera.transform.localEulerAngles = new Vector3(verticalLook,0f,0f);    
 
            /*Ray jumpRay = new Ray(transform.position + new Vector3(0,-1.01f,0), new Vector3(0, -rayDist, 0));
                
