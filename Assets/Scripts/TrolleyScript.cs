@@ -80,7 +80,7 @@ public class TrolleyScript : MonoBehaviour
         {
             bag1 = false;
             Debug.Log("1Off");
-            obj1Text.color = Color.green;
+            obj1Text.color = Color.black;
         }
         
         if (other.tag == "obj2Tag")

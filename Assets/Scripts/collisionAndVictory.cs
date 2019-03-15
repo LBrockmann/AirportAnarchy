@@ -17,7 +17,7 @@ public class collisionAndVictory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainText.text = "Find the Black Suit Cases";
+        mainText.text = "Get your cases on the trolley so you can go home";
         exit.SetActive(false);
         exitSign.text = "_";
     }

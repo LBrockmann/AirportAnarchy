@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine;
 
-public class UIscripts : MonoBehaviour
+public class UIScript3 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class UIscripts : MonoBehaviour
         
     }
 
-    public void Disembark()
+    public void ReliveHell()
     {
         Debug.Log("loading");
         SceneManager.LoadScene("AirportAnarachy2");
